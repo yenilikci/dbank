@@ -4,7 +4,7 @@ import Float "mo:base/Float";
 
 actor DBank {
   stable var currentValue: Float = 300;
-  // currentValue := 100;
+  // currentValue := 300;
 
   stable var startTime = Time.now();
   // startTime := Time.now();
@@ -20,7 +20,7 @@ actor DBank {
 
   // allow users to withdrawl an amount from the currentValue
   // decrease the currentValue by the amount
-  public func withdrawl(amount: Float) {
+  public func withdraw(amount: Float) {
     let tempValue: Float = currentValue - amount;
     if(tempValue >= 0) {
       currentValue -= amount;
